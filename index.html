@@ -772,6 +772,7 @@
                 .embed-container {
                   position: relative;
                   padding-bottom: 56.25%;
+                  /* 16:9 Aspect Ratio */
                   height: 0;
                   overflow: hidden;
                   max-width: 100%;
@@ -786,11 +787,32 @@
                   width: 100%;
                   height: 100%;
                 }
+
+                /* library's viewports
+                1200px max-width: 1140px;
+                992px max-width: 960px;
+                768px max-width: 720px;
+                576px max-width: 540px;
+                */
+
+                /* CSS Media Queries */
+                @media (max-width: 1200px) {
+                  .embed-container {
+                    min-height: 1080px;
+                  }
+                }
+
+                @media (max-width: 992px) {
+                  .embed-container {
+                    min-height: 1600px;
+                  }
+                }
               </style>
               <div class='embed-container'>
                 <iframe src='https://jaxtoday.org/jacksonville-today-embed/' style='border:0'></iframe>
               </div>
               <!-- END JAXTODAY EMBED -->
+
             </div>
           </div>
         </div>
